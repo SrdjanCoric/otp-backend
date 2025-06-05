@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.json({ message: "OTP Verification API is running" });
 });
 
-app.post("/api/questions/auth-code-input", (req, res) => {
+app.post("/api/auth-code", (req, res) => {
   const { otp } = req.body;
 
   console.log("Received OTP:", otp);
