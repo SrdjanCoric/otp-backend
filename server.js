@@ -16,9 +16,9 @@ app.post("/api/auth-code", (req, res) => {
   console.log("Received OTP:", otp);
 
   if (otp === "412378") {
-    return res.status(204).send();
+    return res.status(204).send("Successfully verified OTP!");
   } else {
-    return res.status(403).send();
+    return res.status(403).send("Invalid OTP.");
   }
 });
 
